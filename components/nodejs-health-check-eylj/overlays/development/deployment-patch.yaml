@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: nodejs-health-check-eylj
+  namespace: e2e-demos-sjpf-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio-qe/test-images-protected@sha256:84efd0b1e1f534e259b61e0c216700570a56e4072f49e1c4eb7d3bf4c82c9bc4
+        name: my-nodejs
+        resources: {}
+status: {}
